@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TimeTag week="W1" day="D1"/>
+    <MoneyTag money="$3333"/>
+     <div class="clr"></div>
+    <CookerTag cookers=""/>
+    <CustomerPart customermsg=""/>
+   
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import TimeTag from './components/time.vue'
+import MoneyTag from './components/money.vue'
+import CookerTag from './components/cooker.vue'
+import CustomerPart from './components/custompart.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TimeTag,
+    MoneyTag,
+    CookerTag,
+    CustomerPart
   }
 }
 </script>
@@ -24,5 +35,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background:url('assets/img/background.jpg')
+}
+.clr{
+    clear:both
 }
 </style>
